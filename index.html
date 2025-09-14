@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vercel-like YouTube Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">V</div>
+      <div class="title">VercelTube</div>
+    </div>
+    <nav class="nav">
+      <button id="themeToggle" class="btn small">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="left">
+      <div class="player-wrap">
+        <div id="player" class="player-placeholder">
+          <!-- YouTube iframe will be injected here -->
+          <div class="hint">Load a YouTube link or ID to start watching</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-row">
+          <input id="videoInput" placeholder="Paste YouTube URL or video ID" />
+          <button id="loadBtn" class="btn">Load</button>
+        </div>
+
+        <div class="control-row small-gap">
+          <button id="playBtn" class="btn">Play</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="muteBtn" class="btn">Mute</button>
+          <button id="unmuteBtn" class="btn">Unmute</button>
+          <button id="fsBtn" class="btn">Fullscreen</button>
+        </div>
+
+        <div class="control-row">
+          <label>Seek: <input id="seekRange" type="range" min="0" max="100" value="0"></label>
+          <span id="timeLabel">0:00 / 0:00</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="panel">
+        <h3>Playlist</h3>
+        <ul id="playlist"></ul>
+        <div class="add-row">
+          <input id="addInput" placeholder="YouTube URL or ID" />
+          <button id="addBtn" class="btn small">Add</button>
+        </div>
+      </div>
+
+      <div class="panel small">
+        <h4>Info</h4>
+        <p>Simple in-page YouTube player using the official IFrame API.
+        Buttons below control the current video.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">Made with ♥ — open-source demo</footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+            </html>
+            
